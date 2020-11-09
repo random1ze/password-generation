@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman&display=swap");
+
+$mainColor: LightSalmon;
+$textColor: #000;
+$buttonColor: tomato;
+$fontFamily: "Goldman", cursive;
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: $fontFamily;
+	font-size: 20px;
+	background:#f5f5f5 url('../bg.png');
+}
+.container {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.password__text {
+	font-family: $fontFamily;
+	font-size: inherit;
+	color: $textColor;
+	padding: 5px;
+	min-width: 25rem;
+	border: 1px solid $mainColor;
+	border-radius: .5rem;
+	transition: border-color .3s;
+}
+.password__text:hover {
+	border-color: $buttonColor;
+}
+.password__text::selection {
+	background: $mainColor;
+}
+.btn__generate {
+	margin-top: 10px;
+	padding: 5px;
+	font-family: inherit;
+	font-size: inherit;
+	border: 1px solid $mainColor;
+	min-width: 25rem;
+	border-radius: .5rem;
+	background: $buttonColor;
+	opacity: .8;
+	transition: opacity .3s;
+}
+.btn__generate:hover {
+	cursor: pointer;
+	opacity: 1;
+}
